@@ -62,10 +62,10 @@ const Page = () => {
                                         : "Que Pena :("}
                                 </div>
                             </div>
-                            <div className="px-1">
+                            <div className="px-1 max-h-[60vh]  overflow-y-scroll">
                                 {questions.map((item, index) => (
                                     <>
-                                        <div className="font-bold">
+                                        <div className="font-semibold">
                                             {index + 1}. {item.question}
                                         </div>
                                         <div className="flex gap-2 pl-1 text-sm">

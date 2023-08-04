@@ -39,10 +39,10 @@ export const QuestionItem = ({ item, count, onAnswer }: Props) => {
                             }
                         `}
                     >
-                        {key === 0 && "a) "}
-                        {key === 1 && "b) "}
-                        {key === 2 && "c) "}
-                        {key === 3 && "d) "}
+                        {key === 0 && 'a) '}
+                        {key === 1 && 'b) '}
+                        {key === 2 && 'c) '}
+                        {key === 3 && 'd) '}
                         {option}
                     </div>
                 ))}
