@@ -47,7 +47,7 @@ const Page = () => {
                 {current === questions.length && (
                     <>
                         <div className="p-3 text-zinc-800">
-                            <div className=" py-1 flex items-center justify-between">
+                            <div className=" py-1">
                                 <div className="font-bold text-lg text-sky-500">
                                     Gabarito
                                 </div>
