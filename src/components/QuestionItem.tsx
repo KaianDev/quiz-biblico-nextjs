@@ -18,15 +18,15 @@ export const QuestionItem = ({ item, count, onAnswer }: Props) => {
 
         setTimeout(() => {
             setSelected(null);
-        }, 2500);
+        }, 1500);
     };
 
     return (
         <div>
-            <div className="font-bold text-xl text-zinc-700">
+            <div className="font-bold text-xl text-gray-800 leading-1">
                 {count}. {item.question}{" "}
             </div>
-            <div className="p-2">
+            <div className="p-2 text-gray-900">
                 {item.options.map((option, key) => (
                     <div
                         key={key}
@@ -34,7 +34,7 @@ export const QuestionItem = ({ item, count, onAnswer }: Props) => {
                         className={`py-1 px-2 border border-gray-400 mb-2 bg-gray-300 rounded-md 
                             ${
                                 selected !== null && selected === key
-                                    ? "cursor-auto bg-blue-100"
+                                    ? "cursor-auto bg-gray-600 text-white"
                                     : "hover:opacity-60 cursor-pointer"
                             }
                         `}
