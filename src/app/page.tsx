@@ -3,6 +3,7 @@
 import { QuestionItem } from "@/components/QuestionItem";
 import { questions } from "@/data/questions";
 import { useState } from "react";
+import { HiCheck, HiXMark } from "react-icons/hi2";
 
 const Page = () => {
     const [current, setCurrent] = useState(0);
@@ -14,7 +15,7 @@ const Page = () => {
         setListAnswer([...listAnswer, key]);
         setTimeout(() => {
             setCurrent(current + 1);
-        }, 2500);
+        }, 1500);
         if (key === currentQuestion.answer) setCorrect(correct + 1);
     };
 
@@ -27,7 +28,9 @@ const Page = () => {
     return (
         <div className="w-screen h-screen flex justify-center items-center bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 px-3">
             <div className="w-full max-w-xl border-2 border-white rounded-lg overflow-x-hidden bg-slate-100 shadow-md shadow-black/50">
-                <div className="font-bold text-2xl text-right px-3 py-2 border-b text-sky-500">{title}</div>
+                <div className="font-bold text-2xl text-right px-3 py-2 border-b text-sky-500">
+                    {title}
+                </div>
 
                 {current < questions.length && (
                     <>
@@ -38,7 +41,7 @@ const Page = () => {
                                 onAnswer={handleAnswered}
                             />
                         </div>
-                        <div className="p-3 text-center text-sm border-t">
+                        <div className="p-3 text-center text-gray-900 text-sm border-t">
                             {current + 1} de {questions.length} pergunta
                             {questions.length === 1 ? "" : "s"}
                         </div>
@@ -58,8 +61,8 @@ const Page = () => {
                                         : " questões"}
                                     !{" "}
                                     {correct > questions.length / 2
-                                        ? "Parabéns!! :D"
-                                        : "Que Pena :("}
+                                        ? "Parabéns!! 😁"
+                                        : "Que Pena 😕"}
                                 </div>
                             </div>
                             <div className="px-1 max-h-[60vh]  overflow-y-scroll">
@@ -68,19 +71,19 @@ const Page = () => {
                                         <div className="font-semibold">
                                             {index + 1}. {item.question}
                                         </div>
-                                        <div className="flex gap-2 pl-1 text-sm">
+                                        <div className="flex justify-between pl-1 items-center text-sm">
                                             R -{" "}
                                             {item.options[listAnswer[index]]}
                                             <div>
                                                 {listAnswer[index] ===
                                                 item.answer ? (
-                                                    <span className="text-sm font-semibold bg-emerald-400 py-1 px-2 rounded-md border-green-500">
-                                                        Acertou
-                                                    </span>
+                                                    <div className="flex text-xl text-black justify-center items-center w-6 h-6 mr-1 bg-green-400 rounded-md border-green-500">
+                                                        <HiCheck />
+                                                    </div>
                                                 ) : (
-                                                    <span className="text-sm font-semibold bg-red-400 py-1 px-2 rounded-md border-red-500">
-                                                        Errou
-                                                    </span>
+                                                    <div className="flex text-xl text-black justify-center items-center w-6 h-6 mr-1 bg-red-400 rounded-md border-red-500">
+                                                        <HiXMark />
+                                                    </div>
                                                 )}
                                             </div>
                                         </div>
@@ -91,8 +94,7 @@ const Page = () => {
                         <div className="p-3 text-center border-t">
                             <button
                                 className="py-2 px-3 bg-sky-700 rounded-md text-white hover:opacity-60"
-                                onClick={handleRestartButton}
-                            >
+                                onClick={handleRestartButton}>
                                 Reiniciar
                             </button>
                         </div>
