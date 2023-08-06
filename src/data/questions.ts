@@ -113,8 +113,8 @@ export const questions: Question[] = [
         answer: 2,
     },
     {
-        question: "Qual foi o fruto proibido que Eva comeu no Jardim do Éden?",
-        options: ["Pêra", "Maçã", "Uva", "Laranja"],
+        question: "Que mulher, esposa de um rei de Judá, criou Asa?",
+        options: ["Jezabel", "Maaca", "Abigail", "Bate-Seba"],
         answer: 1,
     },
     {
