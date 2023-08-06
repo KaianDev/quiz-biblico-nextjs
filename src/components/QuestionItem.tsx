@@ -13,12 +13,11 @@ export const QuestionItem = ({ item, count, onAnswer }: Props) => {
     const handleClickOption = (key: number) => {
         if (selected === null) {
             setSelected(key);
-            onAnswer(key);
+            setTimeout(() => {
+                onAnswer(key);
+                setSelected(null);
+            }, 1000);
         }
-
-        setTimeout(() => {
-            setSelected(null);
-        }, 1500);
     };
 
     return (
@@ -37,12 +36,11 @@ export const QuestionItem = ({ item, count, onAnswer }: Props) => {
                                     ? "cursor-auto bg-gray-600 text-white"
                                     : "hover:opacity-60 cursor-pointer"
                             }
-                        `}
-                    >
-                        {key === 0 && 'a) '}
-                        {key === 1 && 'b) '}
-                        {key === 2 && 'c) '}
-                        {key === 3 && 'd) '}
+                        `}>
+                        {key === 0 && "a) "}
+                        {key === 1 && "b) "}
+                        {key === 2 && "c) "}
+                        {key === 3 && "d) "}
                         {option}
                     </div>
                 ))}
