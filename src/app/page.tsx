@@ -66,11 +66,11 @@ const Page = () => {
                 )}
             </div>
 
-            <div className="fixed bottom-[4%] text-sm text-zinc-400 drop-shadow-sm">
+            <div className="fixed hidden sm:block bottom-[4%] text-sm text-zinc-400 drop-shadow-sm">
                 Developer{" "}
                 <a
                     href="https://github.com/KaianDev"
-                    className="hidden sm:block cursor-pointer hover:underline text-sky-800">
+                    className=" cursor-pointer hover:underline text-sky-800">
                     KaianKDev
                 </a>{" "}
             </div>
