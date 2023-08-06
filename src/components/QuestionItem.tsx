@@ -34,7 +34,7 @@ export const QuestionItem = ({ item, count, onAnswer }: Props) => {
                             ${
                                 selected !== null && selected === key
                                     ? "cursor-auto bg-gray-600 text-white"
-                                    : "hover:opacity-60 cursor-pointer"
+                                    : "sm:hover:opacity-60 cursor-pointer"
                             }
                         `}>
                         {key === 0 && "a) "}
