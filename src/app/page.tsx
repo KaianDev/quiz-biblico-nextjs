@@ -32,7 +32,7 @@ const Page = () => {
         setCurrent(0);
         setListAnswer([]);
         setCorrect(0);
-setShowResults(false);
+        setShowResults(false);
     };
 
     return (
