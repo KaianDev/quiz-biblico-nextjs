@@ -65,6 +65,14 @@ const Page = () => {
                     />
                 )}
             </div>
+            <div className="fixed bottom-[4%] text-sm text-zinc-400 drop-shadow-sm">
+                Developer{" "}
+                <a
+                    href="https://github.com/KaianDev"
+                    className="cursor-pointer hover:underline text-sky-800">
+                    KaianKDev
+                </a>{" "}
+            </div>
         </div>
     );
 };
