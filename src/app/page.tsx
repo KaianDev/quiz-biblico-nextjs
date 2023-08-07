@@ -36,7 +36,7 @@ const Page = () => {
     };
 
     return (
-        <div className="w-screen h-screen flex justify-center items-center bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 px-3">
+        <div className="w-screen h-screen grid grid-rows-[1fr] justify-center items-center bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 px-3">
             <div className="w-full max-w-xl border-2 border-white rounded-lg overflow-x-hidden bg-slate-100 shadow-md shadow-black/50">
                 <div className="font-bold text-2xl text-right px-3 py-2 border-b text-sky-500">
                     {title}
@@ -67,7 +67,7 @@ const Page = () => {
                 )}
             </div>
 
-            <div className="fixed hidden sm:block bottom-[4%] text-sm text-zinc-400 drop-shadow-sm">
+            <div className="text-sm text-zinc-400 text-center drop-shadow-sm pb-[4%]">
                 Developer{" "}
                 <a
                     href="https://github.com/KaianDev"
