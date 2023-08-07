@@ -102,9 +102,9 @@ export const questions: Question[] = [
     },
     {
         question:
-            "Quem foi o profeta que desafiou os profetas de Baal para um duelo de sacrifícios no Monte Carmelo?",
-        options: ["Ezequiel", "Elias", "Jeremias", "Zacarias"],
-        answer: 1,
+            "Quantos homens Sansão matou com uma queixada de jumento?",
+        options: ["10", "100", "300", "1.000"],
+        answer: 3,
     },
     {
         question:
